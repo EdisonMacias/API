@@ -71,13 +71,12 @@ def predict():
         "saved_image": final_filename  # Incluir la ruta de la imagen guardada
     }), 200
 
-
 # Ruta para verificar el estado de la API
 @app.route('/status', methods=['GET'])
 def status():
     return jsonify({
-        "success": True,
-        "message": "La API está activa y funcional."
+        "class": "Huevos",
+        "probability": "80%"
     }), 200
 
 # Ruta para obtener métricas del modelo
